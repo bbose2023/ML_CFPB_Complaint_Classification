@@ -1,7 +1,7 @@
 # ML_CFPB_Complaint_Classification
 <b>Group Members : Anirudh Bhamidipati, kanha Baidya, Yashesh Darji and Bonyshree Bose</b>
 
-![CFPB](\images\Report-to-the-CFPB.png)
+![CFPB](images/Report-to-the-CFPB.png)
 
 ## Objective
 
