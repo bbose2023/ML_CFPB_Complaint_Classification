@@ -108,6 +108,29 @@ CFPB publish complaints after the company responds or after 15 days, whichever c
 ### Deep Learning
 ### NLP
 
+## Execution Pre-requisites 
+<ol>
+<li>Steps to pull the project in to your local machine.
+Please check Git Hub documenatation to find the steps to download this porject in your local machine.
+
+
+<li> Steps to download the Consumer Complaint Data 
+<ol>
+    <li>Go to CFPB site (consumerfinance.gov), click on the 'Data and Research' option and select 'Consumer Complaint Database'.</li>
+    <li>Select the Date Range(3m), Read 'Only complaints with narratives' and click on Export Data.</li>
+    <li>On the Export Complaints pop up, Select 'CSV' for exported file type and Select 'Filtered dataset' to download entries that matches the filtering criteria.</li>
+</ol>
+
+<li> Steps to input the Consumer Complaint Data
+<ul>
+<li>The Consumer Complaint Data downloaded in the above step should be copied to this location Resources\MonthData\ that's inside the Project Folder(ML_CFPB_Complaint_Classification).
+</ul>
+</ol>
+
+## Data Pre-Processing Stage
+Execute the data_analysis notebook inside ML_CFPB_Complaint_Classification\data_preprocessing folder.
+
+
 ## Conclusion
 
 
