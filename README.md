@@ -96,30 +96,20 @@ CFPB publish complaints after the company responds or after 15 days, whichever c
         <th>Complaint ID	</th>
         <th>The unique identification number for a complaint.</th>
     </tr>
-</table>
-	
+</table>	
 
-## Workflow
-
-## Data Challenges and Preprocessing Techniques
-
-## Machine Learning
-### Unsupervised
-### Deep Learning
-### NLP
-
-## Execution Pre-requisites 
+## Pre-requisites 
 <ol>
-<li>Steps to pull the project in to your local machine.
-Please check Git Hub documenatation to find the steps to download this porject in your local machine.
+<li>Pull the project in to your local machine
 
-
-<li> Steps to download the Consumer Complaint Data 
-<ol>
+<li> Download the Consumer Complaint Dataset
+<ul>
     <li>Go to CFPB site (consumerfinance.gov), click on the 'Data and Research' option and select 'Consumer Complaint Database'.</li>
     <li>Select the Date Range(3m), Read 'Only complaints with narratives' and click on Export Data.</li>
     <li>On the Export Complaints pop up, Select 'CSV' for exported file type and Select 'Filtered dataset' to download entries that matches the filtering criteria.</li>
-</ol>
+</ul>
+
+<li>Download pre-trained word vectors - Head over to https://nlp.stanford.edu/projects/glove/. Then underneath “Download pre-trained word vectors,” you can choose any of the four options for different sizes or training datasets. Here we are using glove.6B.zip file. Place the downloaded file inside {project_folder}/Resources/Glove and unzip it here.
 
 <li> Steps to input the Consumer Complaint Data
 <ul>
@@ -127,11 +117,103 @@ Please check Git Hub documenatation to find the steps to download this porject i
 </ul>
 </ol>
 
-## Data Pre-Processing Stage
-Execute the data_analysis notebook inside ML_CFPB_Complaint_Classification\data_preprocessing folder.
+## Technologies 
 
+This repository includes a wide range of technologies and tools used in various machine learning and data science projects:
+
+- **Programming Languages:** Python
+- **Libraries/Frameworks:**
+  - Machine Learning: scikit-learn, TensorFlow, PyTorch, Keras
+  - NLP: IBM Watson, Natural Language Toolkit (NLTK), SpaCy
+  - Supervised Models: Logistic Regression and Random Forest
+  - Deep Learning: Bi-directional LSTM
+  - MatplotLib and SeaBorn for the graphs
+- **Tools & Platforms:** 
+  - Google Colab, Jupyter Notebooks
+  - Git and GitHub for version control
+
+## Execution
+Execute the notebooks inside ML_CFPB_Complaint_Classification\data_preprocessing folder in the sequence given below:-
+* data_analysis
+* model_data
+* supervised_ML
+* deep_learning
+
+These notebooks would save the model inside the Resources\ModelData folder which can be used for further perform prediction testing.
+To perform prediction testing run these files supervised_ML_test and deep_learning_test
+
+## 📚 Resources and References
+
+- **Official Python Documentation**: [Python.org](https://docs.python.org/3/)
+- **Flask Documentation**: [Flask.palletsprojects.com](https://flask.palletsprojects.com/en/2.0.x/)
+- **Scikit-learn User Guide**: [Scikit-learn.org](https://scikit-learn.org/stable/user_guide.html)
+- **Keras Documentation**: [Keras.io](https://keras.io/)
+- **TensorFlow Documentation**: [Tensorflow.org](https://www.tensorflow.org/)
+- **PyTorch Documentation**: [Pytorch.org](https://pytorch.org/docs/)
+
+## Workflow
+
+## Data Challenges and Preprocessing Techniques
+
+* Imbalanced Data:
+
+        Problem: Class imbalance where some classes are underrepresented can cause the model to be biased towards the majority class.
+
+        Solution: Techniques such as SMOTE (Synthetic Minority Over-sampling Technique), undersampling, or using class weights in the model can help balance the data.
+* Large Dataset
+
+* Preprocessing Techniques:
+        Text Cleaning:
+
+        Tokenization: Splitting text into individual words or tokens.
+
+        Stop Word Removal: Removing common words that do not contribute to the meaning (e.g., "and", "the").
+
+        Stemming/Lemmatization: Reducing words to their root form (e.g., "running" to "run").
+
+* Feature Extraction:
+
+        TF-IDF (Term Frequency-Inverse Document Frequency): Weighs the importance of a word in a document relative to its frequency across all documents.
+
+* Encoding Categorical Variables:
+
+        Tokenization: Converts categorical variables into binary vectors.
+
+        Label Encoding: Assigns a unique integer to each category.
+
+### NLP
+![Logistic Regression Metric](images/NLP_Phases.jpeg)
+
+## Machine Learning
+### Supervised (Logistic Regression)
+![Logistic Regression Metric](images/Metric_LR.png)
+![Logistic Regression Confusion Matrix](images/confusion_LR.png)
+### Supervised (Random Forest)
+![Random Forest](images/Metric_RF.png)
+![Random Forest Confusion Matrix](images/confusion_RF.png)
+### Deep Learning
+* LSTM(Bi-directional)
+![LSTM](images/confusion_matrix_heatmap_for_LSTM.png)
+
+* LSTM GLOVE(Bi-directional)
+![LSTM](images/confusion_matrix_heatmap_for_LSTM_(GLOVE).png)
 
 ## Conclusion
+<ol>
+<li> Challenges: Data Imbalance: Addressed class imbalance issues using techniques like oversampling and class weights.
 
+<li>Feature Selection: Managed high-dimensional data by selecting relevant features and applying dimensionality reduction techniques.
 
+<li>Model Complexity: Balanced model complexity and computational efficiency to ensure robust performance.
+</ol>
+
+## Future Work:
+
+Multi-Class Classification: Expand the model to classify text data into multiple categories (e.g., 12 products) instead of binary classification.
+
+Advanced Models: Explore advanced models such as transformers (BERT, GPT) for better performance and deeper insights.
+
+Explainability: Integrate explainability techniques to understand and interpret model decisions, making the system more transparent and trustworthy.
+
+Overall, this project showcases the power of combining NLP, supervised models, and deep learning to automate text classification and generate valuable insights from large volumes of text data. By continuously refining and expanding the model, we can achieve even greater accuracy and applicability, driving significant improvements in various domains.
 
