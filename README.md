@@ -124,9 +124,8 @@ This repository includes a wide range of technologies and tools used in various 
 - **Programming Languages:** Python
 - **Libraries/Frameworks:**
   - Machine Learning: scikit-learn, TensorFlow, PyTorch, Keras
-  - NLP: IBM Watson, Natural Language Toolkit (NLTK), SpaCy
-  - Supervised Models: Logistic Regression and Random Forest
-  - Deep Learning: Bi-directional LSTM
+  - NLP: Natural Language Toolkit (NLTK), SpaCy, neuralcoref
+  - SpaCy Models to download - en_core_web_sm and en
   - MatplotLib and SeaBorn for the graphs
 - **Tools & Platforms:** 
   - Google Colab, Jupyter Notebooks
@@ -145,7 +144,6 @@ To perform prediction testing run these files supervised_ML_test and deep_learni
 ## 📚 Resources and References
 
 - **Official Python Documentation**: [Python.org](https://docs.python.org/3/)
-- **Flask Documentation**: [Flask.palletsprojects.com](https://flask.palletsprojects.com/en/2.0.x/)
 - **Scikit-learn User Guide**: [Scikit-learn.org](https://scikit-learn.org/stable/user_guide.html)
 - **Keras Documentation**: [Keras.io](https://keras.io/)
 - **TensorFlow Documentation**: [Tensorflow.org](https://www.tensorflow.org/)
